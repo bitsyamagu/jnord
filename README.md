@@ -46,7 +46,7 @@ Java version of Nord's CNV analysis (Target CNV detection)
    - This data is used for plotting graph
 + --cnvCallerMinCoverage (optional)
    - Low read depth regions are ignored in analysis(default: 30)
-     -- Median of read depths is used for filtering
+     - Median of read depths is used for filtering
 + --samples (required)
    - Put target sample names(written in SM fieled of the @RG record in bam) to output graph files.
 
