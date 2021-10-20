@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Uchiyama"
+   given-names: "Yuri"
+   orcid: "https://orcid.org/0000-0002-4540-5277"
+- family-names: "Yamaguchi"
+   given-names: "Daisuke"
+   orcid: "https://orcid.org/0000-0003-4708-577X"
+- family-names: "Matsumoto"
+   given-names: "Naomichi"
+   orcid: " https://orcid.org/0000-0001-9846-6500"
+title: "Efficient detection of copy-number variations using exome data: Batch- and sex-based analyses"
+version: 1.0.0
+doi: 10.1002/humu.24129
+date-released: 2021-10-20
+url: "https://github.com/bitsyamagu/jnord"
