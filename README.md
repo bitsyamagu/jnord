@@ -40,12 +40,19 @@ Java version of Nord (Target CNV detection)
 + --bamdir (required)
    - A directory contains BAM and BAI files
 + --sureselect (required)
-   - BED formatted file of your capture kit
-+ --refgene
-   - refGene.txt file obtained from UCSC web site
+   - Path to BED formatted file of your capture kit
++ --refgene (required)
+   - Path to refGene.txt file obtained from UCSC web site
    - This data is used for plotting graph
-+ --samples
++ --samples (required)
    - Put target sample names(written in SM fieled of the @RG record in bam) to output graph files.
+
+## Tips
+If you feel jnord requires many mandatory commmand line arguments, 
+customize 16th line of "jnord" shortcut script like this:
+   ```exec "$JAVA -cp $CLASSPATH jnord.Main2 --refGene /path/to/default/refGene.txt --sureselect /path/to/default/SureSelect.bed " . join(" ", @ARGV);
+   
+When you put some command line options twice or more, only the last one is used for analysis.
 
 ## References
 + Accurate and exact CNV identification from targeted high-throughput sequence data
