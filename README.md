@@ -1,5 +1,5 @@
 # jnord
-Java version of Nord (Target CNV detection)
+Java version of Nord's CNV analysis (Target CNV detection)
 
 ## Citing jnord
 - Efficient detection of copy-number variations using exome data: Batch- and sex-based analyses. Hum Mutat
