@@ -54,6 +54,13 @@ customize 16th line of "jnord" shortcut script like this:
    
 When you put some command line options twice or more, only the last one is used for analysis.
 
+## Recommendations
++ 30 samples or more 
+   - At least 30 samples(i.e. 30 bam files) or more samples are required for this analysis
+   - All of samples should be sequenced under the same or similar conditions(same flowcell, same sequencer, same date, same operator etc) as possible as
++ Check gene names
+   - Check gene names included in gene list file whether they are included in refGene.txt and capture bed file. If these three files don't have consistent record(genes' name and regions), then jnord will fail.
+
 ## References
 + Accurate and exact CNV identification from targeted high-throughput sequence data
     https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-12-184
