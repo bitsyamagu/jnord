@@ -1,8 +1,11 @@
 # jnord
 Java version of Nord (Target CNV detection)
 
+## Citing jnord
+- Efficient detection of copy-number variations using exome data: Batch- and sex-based analyses. Hum Mutat
+. 2021 Jan;42(1):50-65. doi: 10.1002/humu.24129. Epub 2020 Nov 11.
+  - https://onlinelibrary.wiley.com/doi/epdf/10.1002/humu.24129
 ## Requirements
-
 - Maven:
   - For compilation
   -   https://maven.apache.org/
@@ -15,7 +18,10 @@ Java version of Nord (Target CNV detection)
 
 ## Build
 + Compile
-  mvn compile
-+ Make JAR binary file
-  mvn package
+  - ```mvn compile```
++ Make a JAR binary file
+  - ```mvn package```
   
+## References
++ Accurate and exact CNV identification from targeted high-throughput sequence data
+    https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-12-184
