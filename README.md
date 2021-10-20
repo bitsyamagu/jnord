@@ -48,7 +48,7 @@ Java version of Nord (Target CNV detection)
    - Put target sample names(written in SM fieled of the @RG record in bam) to output graph files.
 
 ## Tips
-If you feel jnord requires many mandatory commmand line arguments, 
+If you feel jnord requires too many mandatory commmand line arguments, 
 customize 16th line of "jnord" shortcut script like this:
    ```exec "$JAVA -cp $CLASSPATH jnord.Main2 --refGene /path/to/default/refGene.txt --sureselect /path/to/default/SureSelect.bed " . join(" ", @ARGV);```
    
