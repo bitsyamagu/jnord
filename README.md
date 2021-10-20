@@ -21,6 +21,11 @@ Java version of Nord (Target CNV detection)
   - ```mvn compile```
 + Make a JAR binary file
   - ```mvn package```
+
+## Installation
++ Copy jar files from target directory and dependent libraries(gral-core, commons-math3, htsjdk) to your environment.
++ Fix paths in the shortcut script "jnord" 
++ Put "jnord" script where you can invoke through PATH environment variable
   
 ## References
 + Accurate and exact CNV identification from targeted high-throughput sequence data
