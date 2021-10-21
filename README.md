@@ -58,7 +58,7 @@ customize 16th line of "jnord" shortcut script like this:
  
    ```exec "$JAVA -cp $CLASSPATH jnord.Main2 --refGene /path/to/default/refGene.txt --sureselect /path/to/default/SureSelect.bed " . join(" ", @ARGV);```
    
-When you put some command line options twice or more, only the last one is used for analysis.
+  When you put some command line options twice or more, only the last one is used for analysis.
 
 - How to prepare BAM files?
   + Map reads to the reference genome by bwa or novoalign etc
