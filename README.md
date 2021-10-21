@@ -53,8 +53,8 @@ Java version of Nord's CNV analysis (Target CNV detection)
 
 ## Tips
 - Too many options?
-If you feel jnord requires too many mandatory commmand line arguments, 
-customize 16th line of "jnord" shortcut script like this:
+
+  If you feel jnord requires too many mandatory commmand line arguments, customize 16th line of "jnord" shortcut script like this:
  
    ```exec "$JAVA -cp $CLASSPATH jnord.Main2 --refGene /path/to/default/refGene.txt --sureselect /path/to/default/SureSelect.bed " . join(" ", @ARGV);```
    
