@@ -52,6 +52,7 @@ Java version of Nord's CNV analysis (Target CNV detection)
    - Put target sample names(written in SM fieled of the @RG record in bam) to output graph files.
 
 ## Tips
+- Too many options?
 If you feel jnord requires too many mandatory commmand line arguments, 
 customize 16th line of "jnord" shortcut script like this:
 
@@ -59,6 +60,10 @@ customize 16th line of "jnord" shortcut script like this:
    
 When you put some command line options twice or more, only the last one is used for analysis.
 
+- How to prepare BAM files?
+  + Map reads to the reference genome by bwa or novoalign etc
+  + Sort and De-duplication by picard
+  
 ## Recommendations
 + 30 samples or more 
    - At least 30 samples(i.e. 30 bam files) or more samples are required for this analysis
