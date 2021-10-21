@@ -63,8 +63,8 @@ customize 16th line of "jnord" shortcut script like this:
 - How to prepare BAM files?
   + Map reads to the reference genome by bwa or novoalign etc
   + Sort and De-duplicate by picard
-  + Indel Realignment and BQSR  (optional)
-    + BAM files processed by GATK4 indel realignmer(HaplotypeCaller) cannot be used for this analysis, because of assembled reads.
+  + Indel Realignment and BQSR by GATK3 (optional)
+    + BAM files processed by GATK4 indel realigner(HaplotypeCaller) cannot be used for this analysis, because of assembled reads.
   
 ## Recommendations
 + 30 samples or more 
