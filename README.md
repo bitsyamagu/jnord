@@ -55,14 +55,16 @@ Java version of Nord's CNV analysis (Target CNV detection)
 - Too many options?
 If you feel jnord requires too many mandatory commmand line arguments, 
 customize 16th line of "jnord" shortcut script like this:
-
+ 
    ```exec "$JAVA -cp $CLASSPATH jnord.Main2 --refGene /path/to/default/refGene.txt --sureselect /path/to/default/SureSelect.bed " . join(" ", @ARGV);```
    
 When you put some command line options twice or more, only the last one is used for analysis.
 
 - How to prepare BAM files?
   + Map reads to the reference genome by bwa or novoalign etc
-  + Sort and De-duplication by picard
+  + Sort and De-duplicate by picard
+  + Indel Realignment and BQSR  (optional)
+    + BAM files processed by GATK4 indel realignmer(HaplotypeCaller) cannot be used for this analysis, because of assembled reads.
   
 ## Recommendations
 + 30 samples or more 
