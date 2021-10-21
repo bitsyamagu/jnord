@@ -10,7 +10,8 @@ Java version of Nord's CNV analysis (Target CNV detection)
   - For compilation
   -   https://maven.apache.org/
 - JDK8 or later
-  - For compilation and execution 
+  - For compilation and execution
+  - We are using Oracle JDK8 
 - Bait file
   - If you use SureSelect for DNA capture, use the padded bed file of the version of your capture kit.
 - refGene.txt
