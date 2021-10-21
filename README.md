@@ -65,7 +65,7 @@ When you put some command line options twice or more, only the last one is used 
 + Check gene names
    - Are your target gene names included in both of refGene.txt and capture bed file? If these three files don't have consistent record(genes' name and regions), then jnord will fail.
 + No "chr" prefix 
-   - We are using a reference genome that doesn't have "chr" prefix in its contig name. So if you want to utilize "chr" prefix, fix RODImpl.java(line11-34), RefGene.java(line 65) and SureSelect.java(line 78) not to remove "chr" prefix.
+   - We are using a reference genome that doesn't have "chr" prefix in its contig name. So if you want to use BAM files containing "chr" prefix, fix RODImpl.java(line11-34), RefGene.java(line 65) and SureSelect.java(line 78) not to remove "chr" prefix.
 ## References
 + Accurate and exact CNV identification from targeted high-throughput sequence data
     https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-12-184
