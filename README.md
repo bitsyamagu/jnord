@@ -1,7 +1,7 @@
 # jnord
 Java version of Nord's CNV analysis (Target CNV detection)
 
-jnord can call CNVs from whole exome sequencing BAM files.
+jnord can detect CNVs on target region from exome sequencing data.
 
 ## Citing jnord
 - Efficient detection of copy-number variations using exome data: Batch- and sex-based analyses. Hum Mutat
