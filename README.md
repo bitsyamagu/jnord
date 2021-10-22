@@ -1,4 +1,4 @@
-# jMord
+# jNord
 Java version of Nord's CNV analysis (Target CNV detection)
 
 jNord can detect CNVs on target region from exome sequencing data.
