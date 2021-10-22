@@ -1,9 +1,9 @@
-# jnord
+# jMord
 Java version of Nord's CNV analysis (Target CNV detection)
 
-jnord can detect CNVs on target region from exome sequencing data.
+jNord can detect CNVs on target region from exome sequencing data.
 
-## Citing jnord
+## Citing jNord
 - Efficient detection of copy-number variations using exome data: Batch- and sex-based analyses. Hum Mutat
 . 2021 Jan;42(1):50-65. doi: 10.1002/humu.24129. Epub 2020 Nov 11.
   - https://onlinelibrary.wiley.com/doi/epdf/10.1002/humu.24129
@@ -56,7 +56,7 @@ jnord can detect CNVs on target region from exome sequencing data.
 ## Tips
 - Too many options?
 
-  If you feel jnord requires too many mandatory commmand line arguments, customize 16th line of "jnord" shortcut script like this:
+  If you feel jNord requires too many mandatory commmand line arguments, customize 16th line of "jnord" shortcut script like this:
  
    ```exec "$JAVA -cp $CLASSPATH jnord.Main2 --refGene /path/to/default/refGene.txt --sureselect /path/to/default/SureSelect.bed " . join(" ", @ARGV);```
    
