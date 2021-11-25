@@ -52,6 +52,15 @@ jNord can detect CNVs on target region from exome sequencing data.
      - Median of read depths is used for filtering
 + --samples (required)
    - Put target sample names(written in SM fieled of the @RG record in bam) to output graph files.
++ --include-X-for-norm true/false   (optional)
+   - Use chrX for normalization. (default: false)
+   - If you want to analyze within genes of X chromome, use this option.
++ --plot-width (optional)
+   - Picture width of all gene plot. (default: auto = genecount * 100 + 400)
++ --windowFilter (optional) 
+   - Minmum CNV core sizes. 
+   - default: --windowFilter 180,200
+      - At least 180 bases should exeeds CNV criteria ratio in 200 base window
 
 ## Tips
 - Too many options?
