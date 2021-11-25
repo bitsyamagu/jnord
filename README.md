@@ -56,7 +56,7 @@ jNord can detect CNVs on target region from exome sequencing data.
    - Use chrX for normalization. (default: false)
    - If you want to analyze within genes of X chromome, use this option.
 + --plot-width (optional)
-   - Picture width of all gene plot. (default: auto = genecount * 100 + 400)
+   - Picture width of all gene plot. (default: auto = genecount * 100 + 500)
 + --windowFilter (optional) 
    - Minmum CNV core sizes. 
    - default: --windowFilter 180,200
