@@ -173,7 +173,7 @@ public class CNVCaller {
     private ArrayList<CNV> filter(String sample, ArrayList<CNV> cnvs, Detector detector){
         // filter by Median and Criteria
         MedianFilter medianFilter = new MedianFilter();
-        WindowFilter windowFilter = new WindowFilter();
+        WindowFilter windowFilter = new WindowFilter(AnalysisContext.windowFilter_passThreshold , AnalysisContext.windowFilter_lengthThreshold);
         ArrayList<CNV> result = new ArrayList<CNV>();
         for(CNV cnv: cnvs){
             double[] buf = cnv.getRatioNormalized(sample, cnv.getStart(), cnv.getEnd());
@@ -184,7 +184,7 @@ public class CNVCaller {
                 // System.err.print("Median filter: " + medianFilter.accept(buf) + "\t" );
                 // System.err.println("Window filter: " + windowFilter.accept(buf, median, detector) );
             } else if(AnalysisContext.debug) {
-                System.err.print("FILT" + "\t" +sample + "\t" + cnv.getChromosome() + "\t" + cnv.getStart() + "\t" + cnv.getEnd() + "\t");
+                System.err.print("FILT" + "\t" + detector.getClass().getName() + "\t" +sample + "\t" + cnv.getChromosome() + "\t" + cnv.getStart() + "\t" + cnv.getEnd() + "\t");
                 System.err.print("Median filter: " + medianFilter.accept(buf) + "\t" );
                 System.err.println("Window filter: " + windowFilter.accept(buf, median, detector) );
             }

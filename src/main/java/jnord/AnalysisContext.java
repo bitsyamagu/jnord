@@ -33,4 +33,10 @@ public class AnalysisContext {
     public static double SN_threshold = 3.0f;
 
     public static boolean debug = false;
+
+    public static int windowFilter_passThreshold = 180;
+    public static int windowFilter_lengthThreshold = 200;
+
+    public static boolean auto_scale = true;
+    public static int plot_width = 1900;
 }

@@ -459,9 +459,9 @@ public class Main2 {
             // ArrayList<RefGene> refgenes = RefGene.load(new java.util.zip.GZIPInputStream(new java.io.FileInputStream("./resources/UCSC-20181203/refGene.txt.gz")));
             ArrayList<RefGene> refgenes = null;
             if(refgenePath.endsWith(".gz")){
-		refgenes = RefGene.load(new java.util.zip.GZIPInputStream(new java.io.FileInputStream(refgenePath)));
+                refgenes = RefGene.load(new java.util.zip.GZIPInputStream(new java.io.FileInputStream(refgenePath)));
             }else {
-		refgenes = RefGene.load(new java.io.FileInputStream(refgenePath));
+                refgenes = RefGene.load(new java.io.FileInputStream(refgenePath));
             }
             HashMap<String, ArrayList<RefGene>> map = new HashMap<>();
             for(RefGene refgene: refgenes){
@@ -518,6 +518,9 @@ public class Main2 {
         for(int i = 0; i<argv.length-1; i++){
             if(argv[i].equals("--threads")){
                 threadpoolSize = Integer.parseInt(argv[i+1]);
+            }else if(argv[i].equals("--plot-width")){
+                AnalysisContext.auto_scale = false;
+                AnalysisContext.plot_width = Integer.parseInt(argv[i+1]);
             }else if(argv[i].equals("--bamdir")){
                 bamDir = argv[i+1];
             }else if(argv[i].equals("--samples")){
@@ -550,6 +553,11 @@ public class Main2 {
                 }
             }else if(argv[i].equals("--debug")){
                 AnalysisContext.debug = Boolean.parseBoolean(argv[i+1]);
+            }else if(argv[i].equals("--windowfilter")){
+                // --windowfilter 180,200
+                String[] thresholds = argv[i+1].split(",");
+                AnalysisContext.windowFilter_passThreshold = Integer.parseInt(thresholds[0]);
+                AnalysisContext.windowFilter_lengthThreshold = Integer.parseInt(thresholds[1]);
             }else if(argv[i].startsWith("-")){
                 System.err.println("Unrecognized option " + argv[i]);
                 System.exit(-1);

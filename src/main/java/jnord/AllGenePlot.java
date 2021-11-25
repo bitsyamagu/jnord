@@ -110,7 +110,11 @@ public class AllGenePlot {
         a.setMin(0.0);
         // pw.close();
         DrawableWriter writer = DrawableWriterFactory.getInstance().get("image/png");
-        writer.write(plot, new FileOutputStream(new File(sample  + ".all_genes.png")), 1900, 600);
+        int width = AnalysisContext.plot_width;
+        if(AnalysisContext.auto_scale){
+            width = genes.size()*100 + 500;
+        }
+        writer.write(plot, new FileOutputStream(new File(sample  + ".all_genes.png")), width, 600);
 
         PrintWriter pw  = new PrintWriter(new BufferedWriter(new FileWriter(sample + ".all_genes.txt")));
         for(Gene gene: genes){
