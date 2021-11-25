@@ -263,6 +263,8 @@ public class Main2 {
                 String chr = r.getChromosome();
                 if(!(chr.startsWith("X") || chr.startsWith("Y") || chr.startsWith("M"))){
                     length += r.getLength();
+                }else if(chr.startsWith("X") && AnalysisContext.includeX_normalization){
+                    length += r.getLength();
                 }
             }
         }
@@ -281,7 +283,10 @@ public class Main2 {
                 for(Gene gene: this.genes){
                     for(Region r: gene.getRegions()){
                         String chr = r.getChromosome();
-                        if(!(chr.startsWith("X") || chr.startsWith("Y") || chr.startsWith("M") || chr.startsWith("GL"))){
+                        if(
+                           (!(chr.startsWith("X") || chr.startsWith("Y") || chr.startsWith("M") || chr.startsWith("GL")))
+                           || (chr.startsWith("X") && AnalysisContext.includeX_normalization)
+                        ){
                             double[] depth = r.getDepth(sample);
                             double[] median = r.getMedian();
                             if(depth == null){
@@ -551,6 +556,8 @@ public class Main2 {
                     System.err.println("Unknown option for --legend");
                     System.exit(-1);
                 }
+            }else if(argv[i].equals("--include-X-for-norm")){
+                AnalysisContext.includeX_normalization = Boolean.parseBoolean(argv[i+1]);
             }else if(argv[i].equals("--debug")){
                 AnalysisContext.debug = Boolean.parseBoolean(argv[i+1]);
             }else if(argv[i].equals("--windowfilter")){

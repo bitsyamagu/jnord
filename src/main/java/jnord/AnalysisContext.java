@@ -39,4 +39,6 @@ public class AnalysisContext {
 
     public static boolean auto_scale = true;
     public static int plot_width = 1900;
+
+    public static boolean includeX_normalization = false;
 }
