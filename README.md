@@ -85,6 +85,8 @@ jNord can detect CNVs on target region from exome sequencing data.
    - Are your target gene names included in both of refGene.txt and capture bed file? If these three files don't have consistent record(genes' name and regions), then jnord will fail.
 + No "chr" prefix 
    - We are using a reference genome that doesn't have "chr" prefix in its contig name. So if you want to use BAM files containing "chr" prefix, fix RODImpl.java(line11-34), RefGene.java(line 65) and SureSelect.java(line 78) not to remove "chr" prefix.
++ GRCh38 and Twist support
+   - Use files included in jnord_hg38.zip. This archive contains jnord program for GRCh38 and BED file for Twist target enrichment.     
 ## References
 + Accurate and exact CNV identification from targeted high-throughput sequence data
     https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-12-184
